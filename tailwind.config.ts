@@ -28,8 +28,8 @@ const config: Config = {
         sm: "0.375rem",
       },
       fontFamily: {
-        sans: ["var(--font-manrope)", "system-ui", "sans-serif"],
-        serif: ["var(--font-bitter)", "serif"],
+        sans: ["Avenir Next", "Segoe UI", "system-ui", "sans-serif"],
+        serif: ["Iowan Old Style", "Palatino Linotype", "Book Antiqua", "serif"],
       },
       boxShadow: {
         soft: "0 10px 30px -15px rgba(30, 41, 59, 0.2)",

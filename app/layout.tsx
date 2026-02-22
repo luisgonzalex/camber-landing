@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Bitter } from "next/font/google";
 import "./globals.css";
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-});
-
-const bitter = Bitter({
-  variable: "--font-bitter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Camber Consulting | Operational Clarity",
@@ -24,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${bitter.variable} min-h-screen bg-background font-sans text-foreground antialiased`}>
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
       </body>
     </html>
