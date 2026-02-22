@@ -2,20 +2,20 @@ import { Reveal } from "@/components/landing/reveal";
 
 const faqs = [
   {
-    question: "How long does the audit take?",
-    answer: "Most teams finish in under 3 minutes.",
+    question: "Is Camber a consulting firm or a software product?",
+    answer: "Camber is a consulting firm. The audit is a free tool we built to diagnose fit and surface opportunities.",
   },
   {
-    question: "Who is this built for?",
-    answer: "Founder-led businesses with 1-25 employees that need more operating structure.",
+    question: "Who is this best for?",
+    answer: "RGV founder-led teams (1-25 employees) that are growing but feeling operational friction.",
   },
   {
-    question: "Is this an AI agency service?",
-    answer: "No. AI supports the diagnosis, but systems and execution are the product.",
+    question: "What problems do you usually fix?",
+    answer: "Lead tracking gaps, manual follow-up, disconnected tools, low visibility, and founder overload.",
   },
   {
-    question: "What do we get at the end?",
-    answer: "A clarity score, top bottlenecks, quick wins, a 3-phase 90-day roadmap, and recommended next step.",
+    question: "How do engagements work?",
+    answer: "We start with diagnosis, then implement practical systems and automation in focused phases.",
   },
 ];
 
@@ -25,7 +25,7 @@ export function Faq() {
       <Reveal className="space-y-5">
         <div className="space-y-2">
           <p className="eyebrow">FAQ</p>
-          <h2 className="font-serif text-3xl sm:text-4xl">Questions before you start</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl">Questions before we work together</h2>
         </div>
 
         <div className="space-y-3">

@@ -9,10 +9,13 @@ export function Header() {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
             C
           </span>
-          <span className="text-sm font-semibold tracking-wide">Camber Consulting</span>
+          <span className="flex flex-col">
+            <span className="text-sm font-semibold tracking-wide">Camber Consulting</span>
+            <span className="text-[11px] text-muted-foreground">Operational systems for RGV teams</span>
+          </span>
         </Link>
         <Link href="/audit">
-          <Button size="sm">Take Audit</Button>
+          <Button size="sm">Try Free Audit Tool</Button>
         </Link>
       </div>
     </header>

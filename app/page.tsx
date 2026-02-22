@@ -5,6 +5,7 @@ import { Hero } from "@/components/landing/hero";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { Problems } from "@/components/landing/problems";
 import { ScrollProgress } from "@/components/landing/scroll-progress";
+import { ToolSection } from "@/components/landing/tool";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Problems />
         <HowItWorks />
+        <ToolSection />
         <Faq />
         <FinalCta />
       </div>

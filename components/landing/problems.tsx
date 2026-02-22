@@ -3,20 +3,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ways = [
   {
-    title: "Fix priority drift",
-    description: "Create one weekly priority system that the full team can execute against.",
+    title: "Lead flow becomes visible",
+    description: "We fix scattered lead tracking and manual follow-up so pipeline is measurable.",
   },
   {
-    title: "Reduce handoff delays",
-    description: "Clarify ownership and handoff rules so work does not stall between people.",
+    title: "Disconnected tools get aligned",
+    description: "We simplify your stack and reduce duplicate work across systems and people.",
   },
   {
-    title: "Increase operating visibility",
-    description: "Set up a practical view of status, blockers, and commitments for leaders.",
+    title: "Founder load gets lighter",
+    description: "We move execution out of your head into clear ownership and weekly operating rhythm.",
   },
   {
-    title: "Install execution rhythm",
-    description: "Build a repeatable weekly cadence for planning, review, and follow-through.",
+    title: "Team execution gets consistent",
+    description: "We install practical workflows so growth feels controlled, not reactive.",
   },
 ];
 
@@ -24,8 +24,8 @@ export function Problems() {
   return (
     <section className="section-shell py-12 sm:py-16">
       <Reveal className="mb-6 space-y-3">
-        <p className="eyebrow">Product outcome</p>
-        <h2 className="font-serif text-3xl sm:text-4xl">Four ways we make operations better</h2>
+        <p className="eyebrow">How Camber helps</p>
+        <h2 className="font-serif text-3xl sm:text-4xl">Four ways we improve operations</h2>
       </Reveal>
 
       <div className="grid gap-4 sm:grid-cols-2">
