@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/landing/reveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const problems = [
@@ -18,20 +19,22 @@ const problems = [
 export function Problems() {
   return (
     <section className="section-shell py-12 sm:py-16">
-      <div className="mb-6 space-y-3">
+      <Reveal className="mb-6 space-y-3">
         <p className="eyebrow">Where teams get stuck</p>
         <h2 className="font-serif text-3xl sm:text-4xl">Growth pressure exposes operating gaps</h2>
-      </div>
+      </Reveal>
 
       <div className="grid gap-4 sm:grid-cols-3">
         {problems.map((problem, index) => (
-          <Card key={problem.title} className="group border-border/80 bg-card/95 transition-transform duration-300 hover:-translate-y-1">
-            <CardHeader>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">0{index + 1}</p>
-              <CardTitle className="font-sans text-xl leading-snug">{problem.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-0 text-sm leading-relaxed text-muted-foreground">{problem.description}</CardContent>
-          </Card>
+          <Reveal key={problem.title} delay={80 * (index + 1)}>
+            <Card className="group h-full border-border/80 bg-card/95 transition-transform duration-300 hover:-translate-y-1">
+              <CardHeader>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">0{index + 1}</p>
+                <CardTitle className="font-sans text-xl leading-snug">{problem.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0 text-sm leading-relaxed text-muted-foreground">{problem.description}</CardContent>
+            </Card>
+          </Reveal>
         ))}
       </div>
     </section>

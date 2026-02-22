@@ -49,3 +49,22 @@ body {
 .balanced-copy {
   @apply max-w-2xl text-lg leading-relaxed text-muted-foreground;
 }
+
+.landing-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+.landing-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

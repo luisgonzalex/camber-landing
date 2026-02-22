@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { Reveal } from "@/components/landing/reveal";
 import { Button } from "@/components/ui/button";
 
 export function FinalCta() {
   return (
     <section className="section-shell pb-16 sm:pb-24">
-      <div className="rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/15 via-card/85 to-accent/40 p-8 sm:p-11">
+      <Reveal className="rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/15 via-card/85 to-accent/40 p-8 sm:p-11">
         <div className="max-w-2xl space-y-4">
           <p className="eyebrow">Operational Clarity Audit</p>
           <h3 className="font-serif text-3xl leading-tight sm:text-4xl">See what is slowing execution this quarter.</h3>
@@ -19,7 +20,7 @@ export function FinalCta() {
             </Button>
           </Link>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

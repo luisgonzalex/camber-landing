@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Reveal } from "@/components/landing/reveal";
 import { Button } from "@/components/ui/button";
 
 const deliverables = [
@@ -13,7 +14,7 @@ export function Hero() {
   return (
     <section className="section-shell pt-12 sm:pt-18 lg:pt-24">
       <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
-        <div className="landing-panel p-7 sm:p-10">
+        <Reveal className="landing-panel p-7 sm:p-10">
           <p className="eyebrow">Camber Consulting | RGV</p>
           <h1 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl">
             Practical systems for teams growing faster than their operations.
@@ -31,9 +32,9 @@ export function Hero() {
             </Link>
             <p className="text-sm text-muted-foreground">8 questions. About 3 minutes. Actionable output.</p>
           </div>
-        </div>
+        </Reveal>
 
-        <aside className="landing-panel p-6 sm:p-7">
+        <Reveal className="landing-panel p-6 sm:p-7" delay={120}>
           <p className="eyebrow">What you get</p>
           <h2 className="mt-3 font-serif text-2xl leading-tight">An operator-level scorecard, not generic advice.</h2>
           <ul className="mt-5 space-y-3">
@@ -48,7 +49,7 @@ export function Hero() {
             <p className="text-sm font-semibold">Built for teams of 1-25 employees.</p>
             <p className="mt-1 text-sm text-muted-foreground">Focused on clarity, ownership, and execution rhythm.</p>
           </div>
-        </aside>
+        </Reveal>
       </div>
     </section>
   );
