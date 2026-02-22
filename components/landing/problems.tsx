@@ -1,27 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const problems = [
-  "Priorities shift weekly and teams lose focus.",
-  "Work gets stuck between people, not inside tasks.",
-  "Leaders spend time firefighting instead of steering.",
+  {
+    title: "Priorities shift mid-week",
+    description: "Teams start with a plan but drift into urgent work by Wednesday.",
+  },
+  {
+    title: "Work stalls in handoffs",
+    description: "Delivery slows where ownership changes and follow-through is unclear.",
+  },
+  {
+    title: "Leadership stays reactive",
+    description: "Founders spend too much time unblocking work and chasing updates.",
+  },
 ];
 
 export function Problems() {
   return (
-    <section className="section-shell py-14 sm:py-20">
+    <section className="section-shell py-12 sm:py-16">
       <div className="mb-6 space-y-3">
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground">Common friction</p>
-        <h2 className="font-serif text-3xl sm:text-4xl">Where growth starts to break</h2>
+        <p className="eyebrow">Where teams get stuck</p>
+        <h2 className="font-serif text-3xl sm:text-4xl">Growth pressure exposes operating gaps</h2>
       </div>
+
       <div className="grid gap-4 sm:grid-cols-3">
-        {problems.map((problem) => (
-          <Card key={problem} className="bg-white/90 backdrop-blur">
+        {problems.map((problem, index) => (
+          <Card key={problem.title} className="group border-border/80 bg-card/95 transition-transform duration-300 hover:-translate-y-1">
             <CardHeader>
-              <CardTitle className="font-sans text-lg leading-snug">{problem}</CardTitle>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">0{index + 1}</p>
+              <CardTitle className="font-sans text-xl leading-snug">{problem.title}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-0 text-sm text-muted-foreground">
-              Camber helps teams replace recurring friction with repeatable operating structure.
-            </CardContent>
+            <CardContent className="pt-0 text-sm leading-relaxed text-muted-foreground">{problem.description}</CardContent>
           </Card>
         ))}
       </div>
