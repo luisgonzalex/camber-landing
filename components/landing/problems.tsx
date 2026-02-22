@@ -1,18 +1,22 @@
 import { Reveal } from "@/components/landing/reveal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const problems = [
+const ways = [
   {
-    title: "Priorities shift mid-week",
-    description: "Teams start with a plan but drift into urgent work by Wednesday.",
+    title: "Fix priority drift",
+    description: "Create one weekly priority system that the full team can execute against.",
   },
   {
-    title: "Work stalls in handoffs",
-    description: "Delivery slows where ownership changes and follow-through is unclear.",
+    title: "Reduce handoff delays",
+    description: "Clarify ownership and handoff rules so work does not stall between people.",
   },
   {
-    title: "Leadership stays reactive",
-    description: "Founders spend too much time unblocking work and chasing updates.",
+    title: "Increase operating visibility",
+    description: "Set up a practical view of status, blockers, and commitments for leaders.",
+  },
+  {
+    title: "Install execution rhythm",
+    description: "Build a repeatable weekly cadence for planning, review, and follow-through.",
   },
 ];
 
@@ -20,19 +24,19 @@ export function Problems() {
   return (
     <section className="section-shell py-12 sm:py-16">
       <Reveal className="mb-6 space-y-3">
-        <p className="eyebrow">Where teams get stuck</p>
-        <h2 className="font-serif text-3xl sm:text-4xl">Growth pressure exposes operating gaps</h2>
+        <p className="eyebrow">Product outcome</p>
+        <h2 className="font-serif text-3xl sm:text-4xl">Four ways we make operations better</h2>
       </Reveal>
 
-      <div className="grid gap-4 sm:grid-cols-3">
-        {problems.map((problem, index) => (
-          <Reveal key={problem.title} delay={80 * (index + 1)}>
-            <Card className="group h-full border-border/80 bg-card/95 transition-transform duration-300 hover:-translate-y-1">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {ways.map((item, index) => (
+          <Reveal key={item.title} delay={80 * (index + 1)}>
+            <Card className="h-full border-border/80 bg-card/95">
               <CardHeader>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">0{index + 1}</p>
-                <CardTitle className="font-sans text-xl leading-snug">{problem.title}</CardTitle>
+                <CardTitle className="font-sans text-xl leading-snug">{item.title}</CardTitle>
               </CardHeader>
-              <CardContent className="pt-0 text-sm leading-relaxed text-muted-foreground">{problem.description}</CardContent>
+              <CardContent className="pt-0 text-sm leading-relaxed text-muted-foreground">{item.description}</CardContent>
             </Card>
           </Reveal>
         ))}

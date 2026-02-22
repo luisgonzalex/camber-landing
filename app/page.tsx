@@ -1,4 +1,6 @@
 import { FinalCta } from "@/components/landing/cta";
+import { Faq } from "@/components/landing/faq";
+import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { Problems } from "@/components/landing/problems";
@@ -12,9 +14,11 @@ export default function Home() {
       <div className="pointer-events-none absolute right-0 top-72 h-64 w-64 rounded-full bg-amber-500/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-16 left-1/3 h-56 w-56 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="relative space-y-2">
+        <Header />
         <Hero />
         <Problems />
         <HowItWorks />
+        <Faq />
         <FinalCta />
       </div>
     </main>
